@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Sidebar } from '../components/SideNavbar'
 import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className=" border-b mx-auto">
           <div className=" flex h-16 items-center px-4">
-            PHOTOS APP
+            <Image src={'/album.png'} height={50} width={50} alt='' />
+            Shinxs Photos
             <div className=" ml-auto flex items-center space-x-4">
               <Avatar>
                 <AvatarImage

@@ -76,7 +76,7 @@ export default function EditPage({
               alt="some image"
               crop="pad"
               fillBackground={{
-                prompt,
+                prompt
               }}
             />
           )}

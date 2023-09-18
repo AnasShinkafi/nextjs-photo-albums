@@ -7,8 +7,15 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Heart from "./icons/Heart";
+import { Folder } from "../app/albums/page";
+import cloudinary from 'cloudinary';
 
-export function Sidebar({ }) {
+export async function Sidebar({ }) {
+
+  const { folders } = (await cloudinary.v2.api.root_folders()) as {
+    folders: Folder[];
+  };
+   
   return (
     <div className="pb-12 w-1/6">
       <div className="space-y-4 py-4">
@@ -34,8 +41,18 @@ export function Sidebar({ }) {
                 </svg>
                 Albums
               </Link>
-
             </Button>
+            {folders.map((folder) => (
+                  <Button 
+                    variant={'ghost'}
+                    asChild key={folder.name}
+                    className=" w-full justify-start flex gap-2"
+                  >
+                    <Link className=" pl-4" href={`/album/${folder.path}`}>
+                      {folder.name}
+                    </Link>
+                  </Button>
+                ))}
             <Button asChild variant="ghost" className="w-full justify-start flex gap-3">
              <Link href={'/favorites'}>
              <Heart />

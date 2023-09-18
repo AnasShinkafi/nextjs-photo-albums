@@ -1,11 +1,11 @@
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { FolderPlus } from "lucide-react";
 import { useState } from "react";
 import { addImageToAlbum } from "./Action";
 import { SearchResult } from "../app/gallery/page";
 import { Button } from "./ui/button";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 export function AddToAlbumDialog({
   image,
   onClose,

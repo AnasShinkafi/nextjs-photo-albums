@@ -1,10 +1,3 @@
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
 import { useState } from "react";
 import Link from "next/link";
 import { Pencil } from "lucide-react";
@@ -12,6 +5,7 @@ import { SearchResult } from "../app/gallery/page";
 import { AddToAlbumDialog } from "./AddToAlbumDialog";
 import { Menu } from "./icons/Menu";
 import { Button } from "./ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 
 export function ImageMenu({ image }: { image: SearchResult }) {
   const [open, setOpen] = useState(false);
