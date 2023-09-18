@@ -2,11 +2,11 @@
 
 import { CldImage, CldImageProps } from "next-cloudinary";
 import { useState, useTransition } from "react";
-import { SearchResult } from "./page";
-import { FullHeart } from "../../components/icons/FullHeart";
 import { Heart } from "lucide-react";
-import { ImageMenu } from "../../components/ImageMenu";
-import { setAsFavoriteAction } from "./actions";
+import { SearchResult } from "../app/gallery/page";
+import { setAsFavoriteAction } from "../app/gallery/actions";
+import { ImageMenu } from "./ImageMenu";
+import { FullHeart } from "./icons/FullHeart";
 
 export function CloudinaryImage(
   props: {

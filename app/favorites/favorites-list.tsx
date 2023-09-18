@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { SearchResult } from "../gallery/page";
 import { ImageGrid } from "../../components/ImageGrid";
-import { CloudinaryImage } from "../gallery/CloudinaryImage";
+import { CloudinaryImage } from "../../components/CloudinaryImage";
 
 export default function FavoritesList({
   initialResources,
